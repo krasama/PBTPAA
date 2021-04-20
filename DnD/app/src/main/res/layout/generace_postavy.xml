@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:id="@+id/tabulka_generace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TableRow
+            android:id="@+id/radek_1_generace"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+            <TextView
+                android:id="@+id/text_dexterity"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text="@string/dexterity"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/dexterity_generace"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text=""
+                android:gravity="center"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/radek_2_generace"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+            <TextView
+                android:id="@+id/text_strength"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text="@string/strength"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/strength_generace"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text=""
+                android:gravity="center"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/radek_3_generace"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+            <TextView
+                android:id="@+id/text_intelligence"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text="@string/intelligence"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/inteligence_generace"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text=""
+                android:gravity="center"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/radek_4_generace"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+            <TextView
+                android:id="@+id/text_wisdom"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text="@string/wisdom"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/wisdom_generace"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text=""
+                android:gravity="center"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/radek_5_generace"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+            <TextView
+                android:id="@+id/text_stamina"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text="@string/stamina"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/stamina_generace"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text=""
+                android:gravity="center"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/radek_6_generace"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+            <TextView
+                android:id="@+id/text_charisma"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text="@string/charisma"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/charisma_generace"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text="@string/charisma_generace"
+                android:gravity="center"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/radek_7_generace"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+            <TextView
+                android:id="@+id/vypln"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                />
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:id="@+id/generace"
+        android:layout_width="125dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tabulka_generace"
+        android:text="@string/generovat_postavu"
+        />
+
+    <Button
+        android:id="@+id/reset_generace"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/generace"
+        android:text="@string/reset"
+        />
+
+    <Button
+        android:id="@+id/generace_zpet"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/reset_generace"
+        android:text="@string/zpet"
+        />
+
+</RelativeLayout>

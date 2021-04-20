@@ -10,9 +10,25 @@
     <string name="D10">d10</string>
     <string name="D12">d12</string>
     <string name="D20">d20</string>
-    <string name="D00">d00</string>
+    <string name="D100">d100</string>
     <string name="todo">TODO</string>
     <string name="about">O aplikaci</string>
     <string name="text_about">Aplikace bude sloužit k hodu kostkou, možnost bude házet až dvěmi kostkami zároveň a bude nabízet paletu kostek od d4 do d 20. Další využití programu bude generování základních statiskyk postav pro DnD</string>
     <string name="zpet">Zpět</string>
+    <string name="jedna_kostka">jedna kostka</string>
+    <string name="dve_kostky">dvě kostky</string>
+    <string name="generovat_postavu">Generovat postavu</string>
+    <string name="dexterity">Dexterity</string>
+    <string name="strength">Strength</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="wisdom">Wisdom</string>
+    <string name="stamina">Stamina</string>
+    <string name="charisma">Charisma</string>
+    <string name="charisma_generace"></string>
+    <string name="dexterity_generace"></string>
+    <string name="strength_generace"></string>
+    <string name="intelligence_generace"></string>
+    <string name="wisdom_generace"></string>
+    <string name="staminagenerace"></string>
+    <string name="reset">reset</string>
 </resources>

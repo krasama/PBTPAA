@@ -23,7 +23,8 @@ class MainActivity : AppCompatActivity() {
        }
 
        generation.setOnClickListener {
-           TODO()
+           this.setContentView(R.layout.generace_postavy)
+
        }
 
         about.setOnClickListener {

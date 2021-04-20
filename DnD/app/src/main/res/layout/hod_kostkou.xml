@@ -104,13 +104,34 @@
             android:gravity="center_horizontal" >
 
             <Button
-                android:id="@+id/d00"
+                android:id="@+id/d100"
                 android:layout_width="120dp"
                 android:layout_height="60dp"
                 android:background="@null"
                 android:clickable="true"
-                android:text="@string/D00" />
+                android:text="@string/D100" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/radek_4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
 
+            <Button
+                android:id="@+id/jedna"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:clickable="true"
+                android:text="@string/jedna_kostka"/>
+
+            <Button
+                android:id="@+id/dva"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:clickable="true"
+                android:text="@string/dve_kostky"/>
 
         </TableRow>
     </TableLayout>
