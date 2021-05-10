@@ -17,18 +17,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
        dice.setOnClickListener {
-
-           this.setContentView(R.layout.hod_kostkou)
+           var intent = Intent(this,Kostka::class.java)
+           startActivity(intent)
 
        }
 
        generation.setOnClickListener {
-           this.setContentView(R.layout.generace_postavy)
-
+           var intent = Intent(this,Postava::class.java)
+           startActivity(intent)
        }
 
         about.setOnClickListener {
-            this.setContentView(R.layout.activity_about)
+            var intent = Intent(this,About::class.java)
+            startActivity(intent)
         }
 
 

@@ -12,7 +12,7 @@ class About: AppCompatActivity() {
 
 
         back_about.setOnClickListener {
-            this.setContentView(R.layout.activity_main)
+            finish()
         }
 
     }

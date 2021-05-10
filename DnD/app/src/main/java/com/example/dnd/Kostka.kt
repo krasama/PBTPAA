@@ -8,61 +8,78 @@ import kotlinx.android.synthetic.main.hod_kostkou.*
 class Kostka: AppCompatActivity() {
     var stena: Int = 6
     var pocet: Int = 1
-    private var vysledek: Int =0
+    private var vysledek: Int = 0
 
-    lateinit var diceImage: ImageView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hod_kostkou)
 
+           jedna.setOnClickListener{
+               pocet = 1
+               dice_image_1.setImageResource(R.drawable.d6_1)
+               dice_image_2.setImageResource(0)
 
+           }
 
-            this.jedna.setOnClickListener{
-                pocet = 1
-            }
+           dva.setOnClickListener{
+               pocet = 2
+               dice_image_1.setImageResource(R.drawable.d6_1)
+               dice_image_2.setImageResource(R.drawable.d6_1)
+           }
 
-            this.dva.setOnClickListener{
-                pocet = 2
-            }
-
-           this.d4.setOnClickListener{
+           d4.setOnClickListener{
                 stena = 4
+               cislo_kostky.text = stena.toString()
            }
 
-           this.d6.setOnClickListener{
+           d6.setOnClickListener{
                 stena = 6
+               cislo_kostky.text = stena.toString()
            }
 
-           this.d8.setOnClickListener{
+           d8.setOnClickListener{
                 stena = 8
+               cislo_kostky.text = stena.toString()
            }
 
-           this.d10.setOnClickListener{
+           d10.setOnClickListener{
                 stena = 10
+               cislo_kostky.text = stena.toString()
            }
 
-           this.d12.setOnClickListener{
+           d12.setOnClickListener{
                 stena = 12
+               cislo_kostky.text = stena.toString()
            }
 
-           this.d20.setOnClickListener{
+           d20.setOnClickListener{
                 stena = 20
+               cislo_kostky.text = stena.toString()
            }
 
-           this.d100.setOnClickListener{
+           d100.setOnClickListener{
                 stena = 100
+               cislo_kostky.text = stena.toString()
            }
 
-           this.start.setOnClickListener{
-                this.vysledek = hod(pocet, stena)
-                this.vykres(vysledek)
+           start.setOnClickListener{
+               if (pocet == 2){
+                   vysledek = hod(pocet, stena)
+                   vykres(vysledek, dice_image_1)
+                   vysledek = hod(pocet, stena)
+                   vykres(vysledek, dice_image_2)
+               }
+               else {
+                   vysledek = hod(pocet, stena)
+                   vykres(vysledek, dice_image_1)
+               }
            }
 
 
            back_hod.setOnClickListener {
-               this.setContentView(R.layout.activity_main)
+               finish()
            }
 
         }
@@ -74,7 +91,7 @@ class Kostka: AppCompatActivity() {
             }
             return vysledekH
         }
-            private fun vykres(vysledek:Int){
+            private fun vykres(vysledek:Int, dice: ImageView){
                 if (stena ==4){
                     val drawableResources = when(vysledek){
                         1->R.drawable.d4_1
@@ -83,7 +100,7 @@ class Kostka: AppCompatActivity() {
                         else -> R.drawable.d4_4
 
                     }
-                    diceImage.setImageResource(drawableResources)
+                    dice.setImageResource(drawableResources)
                 }
                 else if (stena == 6) {
                     val drawableResources = when(vysledek){
@@ -95,7 +112,7 @@ class Kostka: AppCompatActivity() {
                         else -> R.drawable.d6_6
 
                     }
-                    diceImage.setImageResource(drawableResources)
+                    dice.setImageResource(drawableResources)
                 }
                 else if (stena == 8){
                     val drawableResources = when(vysledek){
@@ -109,7 +126,7 @@ class Kostka: AppCompatActivity() {
                         else -> R.drawable.d8_8
 
                     }
-                    diceImage.setImageResource(drawableResources)
+                    dice.setImageResource(drawableResources)
                 }
                 else if (stena == 10){
                     val drawableResources = when(vysledek){
@@ -125,7 +142,7 @@ class Kostka: AppCompatActivity() {
                         else -> R.drawable.d10_9
 
                     }
-                    diceImage.setImageResource(drawableResources)
+                    dice.setImageResource(drawableResources)
                 }
                 else if (stena == 12){
                     val drawableResources = when(vysledek){
@@ -143,7 +160,7 @@ class Kostka: AppCompatActivity() {
                         else -> R.drawable.d12_12
 
                     }
-                    diceImage.setImageResource(drawableResources)
+                    dice.setImageResource(drawableResources)
                 }
                 else if (stena == 20){
                     val drawableResources = when(vysledek){
@@ -169,24 +186,24 @@ class Kostka: AppCompatActivity() {
                         else -> R.drawable.d20_20
 
                     }
-                    diceImage.setImageResource(drawableResources)
+                    dice.setImageResource(drawableResources)
                 }
                 else{
                     val drawableResources = when(vysledek){
-                        (0-4)->R.drawable.d10_00
-                        (5-14)->R.drawable.d10_10
-                        (15-24)->R.drawable.d10_20
-                        (25-34)->R.drawable.d10_30
-                        (35-44)->R.drawable.d10_40
-                        (45-54)->R.drawable.d10_50
-                        (55-64)->R.drawable.d10_60
-                        (65-74)->R.drawable.d10_70
-                        (75-84)->R.drawable.d10_80
-                        (85-94)->R.drawable.d10_90
+                        in 0..4->R.drawable.d10_00
+                        in 5..14->R.drawable.d10_10
+                        in 15..24->R.drawable.d10_20
+                        in 25..34->R.drawable.d10_30
+                        in 35..44->R.drawable.d10_40
+                        in 45..54->R.drawable.d10_50
+                        in 55..64->R.drawable.d10_60
+                        in 65..74->R.drawable.d10_70
+                        in 75..84->R.drawable.d10_80
+                        in 85..94->R.drawable.d10_90
                         else -> R.drawable.d10_00
 
                     }
-                    diceImage.setImageResource(drawableResources)
+                    dice.setImageResource(drawableResources)
                 }
         }
 

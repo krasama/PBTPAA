@@ -18,7 +18,7 @@ class Postava : AppCompatActivity(){
         setContentView(R.layout.generace_postavy)
 
         generace_zpet.setOnClickListener {
-            this.setContentView(R.layout.activity_main)
+            finish()
         }
 
         generace.setOnClickListener {
@@ -27,12 +27,12 @@ class Postava : AppCompatActivity(){
         }
 
         reset_generace.setOnClickListener {
-            text_dexterity.text = ""
-            text_strength.text = ""
-            text_intelligence.text = ""
-            text_wisdom.text = ""
-            text_stamina.text = ""
-            text_charisma.text = ""
+            dexterity_generace.text = ""
+            strength_generace.text = ""
+            inteligence_generace.text = ""
+            wisdom_generace.text = ""
+            stamina_generace.text = ""
+            charisma_generace.text = ""
         }
     }
         private fun generovat(){
@@ -45,16 +45,19 @@ class Postava : AppCompatActivity(){
         }
 
         private fun rnd():Int{
-
-            return (1..18).shuffled().first()
+            var mezivypocet = 0
+            for (i in 1..3){
+            mezivypocet += (1..6).shuffled().first()
+            }
+            return mezivypocet
         }
 
         private fun vypis(){
-            text_dexterity.text = dexterity
-            text_strength.text = strength
-            text_intelligence.text = intelligence
-            text_wisdom.text = wisdom
-            text_stamina.text = stamina
-            text_charisma.text = charisma
+            dexterity_generace.text = dexterity
+            strength_generace.text = strength
+            inteligence_generace.text = intelligence
+            wisdom_generace.text = wisdom
+            stamina_generace.text = stamina
+            charisma_generace.text = charisma
         }
 }
