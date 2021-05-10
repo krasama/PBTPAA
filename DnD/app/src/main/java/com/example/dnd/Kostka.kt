@@ -19,53 +19,51 @@ class Kostka: AppCompatActivity() {
 
 
 
-            jedna.setOnClickListener{
+            this.jedna.setOnClickListener{
                 pocet = 1
             }
 
-            dva.setOnClickListener{
+            this.dva.setOnClickListener{
                 pocet = 2
             }
 
-           d4.setOnClickListener{
+           this.d4.setOnClickListener{
                 stena = 4
            }
 
-            d6.setOnClickListener{
+           this.d6.setOnClickListener{
                 stena = 6
            }
 
-            d8.setOnClickListener{
+           this.d8.setOnClickListener{
                 stena = 8
-            }
+           }
 
-            d10.setOnClickListener{
+           this.d10.setOnClickListener{
                 stena = 10
-            }
+           }
 
-            d12.setOnClickListener{
+           this.d12.setOnClickListener{
                 stena = 12
-            }
+           }
 
-            d20.setOnClickListener{
+           this.d20.setOnClickListener{
                 stena = 20
-            }
+           }
 
-            d100.setOnClickListener{
+           this.d100.setOnClickListener{
                 stena = 100
-            }
+           }
 
-            start.setOnClickListener{
-
-               vysledek = hod(pocet, stena)
-                vykres(vysledek)
-
-            }
+           this.start.setOnClickListener{
+                this.vysledek = hod(pocet, stena)
+                this.vykres(vysledek)
+           }
 
 
-            back_hod.setOnClickListener {
-                this.setContentView(R.layout.activity_main)
-            }
+           back_hod.setOnClickListener {
+               this.setContentView(R.layout.activity_main)
+           }
 
         }
 
